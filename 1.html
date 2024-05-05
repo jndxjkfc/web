@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--注释-->
+    <title>hello worlds</title>
+    <link rel="stylesheet" href="1.css">
+    <style>
+        a {
+            text-decoration: none; /*消去a标签的下划线*/
+            /*display: block;*/ /*强制修改成块元素*/
+        }
+        h1{
+            text-align:center;
+            position:sticky;
+            top:0;
+        }
+        .p {
+            float: right;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .p:hover{
+            box-shadow:1px 3px 4px 5px #ff0000;/*阴影*/
+            transform:translate(0,-20px);
+        }
+        ol{
+            list-style-type:upper-alpha;/*按大写字母排序*/
+        }
+        div ul{
+            text-align:center;
+            width:600px;
+            list-style-type:none;
+        }
+        div ul li{
+            line-height:40px;
+            background-color:#8080807f;
+        }
+        .web{
+            background-color:#0094ff;
+            color:#ffffff;
+        }
+        li a{
+            text-decoration:none;
+            color:#0094ff;
+        }
+        table,th,td{
+            border-style:solid;
+            border-collapse:collapse;
+            font-size:30px;
+            line-height:60px;
+            background-color:#80808021;
+        }
+        th{
+            background-color:#0094ff;
+        }
+        .t{
+            background-color:#000000;
+            color:#ffffff;
+        }
+        /*状态伪类*/
+        a:hover{
+            color:#4cff00;
+            /*background-color:#ff006eff;*/
+        }
+        a:active{
+            color:#ff006eff;
+        }
+        /*结构伪类*/
+        ol li:first-child{
+            background-color:#00ffff;
+        }
+        .a::before{
+            content:"好吃";
+        }
+        img{
+            float:left;
+            margin-right:18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>第一个网页</h1>
+    <h2>第二个</h2>
+
+    <!--插入图片-->
+    <img class="p" src="http://nocturne.bczcdn.com/file/1646125582615_85556/head.png" alt="图像" width="200px"><br>
+
+    <!--加入超链接-->
+    <a href="MainWeb.html" target="_blank">点击跳转1</a><!--新页面--><br />
+    <a href="MainWeb.html" target="_self">点击跳转2</a><!--原页面--><br />
+    <!--列表-->
+    <p>有序列表</p>
+    <ol>
+        <li>网络爬虫</li>
+        <li>数据分析</li>
+        <li>人工智能</li>
+    </ol>
+    <p>无序列表</p>
+    <ul class="a">
+        <li>蟹黄拌面</li>
+        <li>无锡排骨</li>
+    </ul>
+    <p>定义列表</p>
+    <dl>
+        <dt>Python</dt>
+        <dd>Python是一种高级、通用、解释型的编程语言，由Guido van Rossum于1991年创建。它具有简单易学、优雅简洁的语法，以及强大的标准库和丰富的第三方库，被广泛应用于各种领域，包括Web开发、科学计算、人工智能、数据分析等。</dd>
+    </dl><br>
+    <div><!--文本环绕图片-->
+        <img src="https://image.similarpng.com/very-thumbnail/2021/12/Python-programming-logo-on-transparent-background-PNG.png" width=100px>
+        <p>python特点</p>
+        <p>1.简洁易读的语法：Python 的语法设计简洁清晰，易于阅读和学习，使得编写代码更加高效。</p>
+        <p>2.动态类型：Python 是一种动态类型语言，不需要显式声明变量的类型，可以根据赋给变量的值自动推断其类型。</p>
+        <p>3.面向对象：Python 支持面向对象编程（OOP），提供了类和对象的概念，允许开发者使用面向对象的编程范例。</p>
+        <p>4.解释性语言：Python 是一种解释性语言，不需要编译成机器码，而是通过解释器逐行执行代码。</p>
+    </div>
+    <!--垂直导航-->
+    <div>
+        <ul>
+            <li class="web">网站</li>
+            <li><a href="https://www.msn.cn/zh-cn/feed?ocid=msedgntp&pc=LCTS&cvid=661544faf1fb4304aca8ad00cdf0fa44&ei=16" target="_blank">微软</a></li>
+            <li><a href="https://www.google.com.hk/" target="_blank">谷歌</a></li>
+        </ul>
+    </div>
+    <!--表格-->
+    <table>
+        <tr>
+            <th colspan="3">学生信息表</th>
+        </tr>
+        <tr class="t">
+            <td>姓名</td>
+            <td>年龄</td>
+                <td>籍贯</td>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td rowspan="2"> 20</td>
+            <td>吉林</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <!--<td >20</td>-->
+            <td>江苏</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>34</td>
+            <td>北京</td>
+        </tr>
+    </table>
+</body>
+</html>
